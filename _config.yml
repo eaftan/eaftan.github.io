@@ -25,14 +25,14 @@ footer-links:
   instagram:
   linkedin:
   pinterest:
-  rss: anything # just type anything here for a working RSS icon, make sure you set the "url" above!
   twitter: Afty698
+  rss: anything # just type anything here for a working RSS icon, make sure you set the "url" above!
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus:
+disqus: eaftan-blog
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
