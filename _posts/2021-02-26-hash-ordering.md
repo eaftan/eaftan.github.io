@@ -99,7 +99,7 @@ modified our JDK to randomize hash iteration order. We still had to file bugs ag
 tests broke as a result of this change, but once all those bugs were fixed, the problem was solved
 permanently.
 
-[^1]: Specifically, Kurt Kleuver and Martin Buchholz
+[^1]: Specifically, Kurt Kluever and Martin Buchholz
 
 We didn't invent this idea. Python and Go were both doing this before us, and we modeled our
 approach on Python's. Like Python, we used an environment variable to provide a random seed which is
