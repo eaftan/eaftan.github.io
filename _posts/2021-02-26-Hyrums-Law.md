@@ -3,9 +3,7 @@ layout: post
 title: Hash iteration order and Hyrum's Law
 ---
 
-## Introduction
-
-A Google engineer named Hyrum Wright made an observation that came to be known as
+A Google engineer named [Hyrum Wright](http://www.hyrumwright.org/) made an observation that came to be known as
 [Hyrum's Law](https://www.hyrumslaw.com/):
 
 > With a sufficient number of users of an API, it does not matter what you promise in the contract:
@@ -100,7 +98,7 @@ modified our JDK to randomize hash iteration order. We still had to file bugs ag
 tests broke as a result of this change, but once all those bugs were fixed, the problem was solved
 permanently.
 
-[^1] Specifically, Kurt Kleuver and Martin Buchholz
+[^1]: Specifically, Kurt Kleuver and Martin Buchholz
 
 We didn't invent this idea. Python and Go were both doing this before us, and we modeled our
 approach on Python's. Like Python, we used an environment variable to provide a random seed which is
@@ -108,12 +106,12 @@ used to randomize per process. That is, hash iteration order is fixed for a give
 changes from invocation to invocation. The environment variable can be used to fix the seed and
 reproduce bugs.
 
-## Summary
+## Conclusions
 
 Hash iteration order is a great example of Hyrum's Law -- if the iteration order is stable in
 practice, users will depend on it no matter what the documentation says. The best way to fix this is
 to randomize the iteration order, making it impossible for users to depend on it. Alternatively, you
-can fix and specify the order if underspecifying it isn't buying you anything.
+can specify the order if underspecifying it isn't buying you anything.
 
 The people who have to deal with this problem might get frustrated that _people are doing it
 wrong_!!! And yes, people are in fact doing it wrong. But even the best software engineers make
