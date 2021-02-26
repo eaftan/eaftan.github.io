@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Hash iteration order and Hyrum's Law
+title: Hash ordering and Hyrum's Law
 ---
 
-A Google engineer named [Hyrum Wright](http://www.hyrumwright.org/) made an observation that came to be known as
-[Hyrum's Law](https://www.hyrumslaw.com/):
+A Google engineer named [Hyrum Wright](http://www.hyrumwright.org/) made an observation that came to
+be known as [Hyrum's Law](https://www.hyrumslaw.com/):
 
 > With a sufficient number of users of an API, it does not matter what you promise in the contract:
 > all observable behaviors of your system will be depended on by somebody.
@@ -12,12 +12,13 @@ A Google engineer named [Hyrum Wright](http://www.hyrumwright.org/) made an obse
 What are the consequences of Hyrum's Law? Well, it means that anyone trying to do a large-scale
 migration is going to tear their hair out discovering that their seemingly simple migration is way
 harder than expected, and that despite putting that giant warning in your docs not to depend on some
-implementation-specifc behavior, your clients are going to depend on it anyway. Can't you just break
-them? They're violating the spec!
+implementation-specifc behavior, your clients are going to depend on it anyway.
+
+Can't you just break them? They're violating the spec!
 
 ![Lisa Simpson looking at a sign that says, "Keep out... or enter. I'm a sign, not a cop"](../images/sign-not-a-cop.jpeg)
 
-In reality, you can't break them. Let's consider a concrete example -- hash iteration order.
+No, you can't break them. Let's consider a concrete example -- hash iteration order.
 
 ## Hash iteration order
 
@@ -81,7 +82,7 @@ How do you deal with this so you can complete the version ugprade?
 One approach might be to file thousands of bugs against the teams that own this broken code and ask
 them to fix the problem. Their code is clearly incorrect, and it's a reasonable request for them to
 fix it. The problem with this approach is that it doesn't fix the underlying problem, and the next
-time you do a Java version upgrade, you're going to have file thousands of bugs again.
+time you do a Java version upgrade, you're going to have to file thousands of bugs again.
 
 ### Specify the behavior
 
