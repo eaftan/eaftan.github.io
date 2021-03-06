@@ -78,7 +78,7 @@ enough scale, something will go wrong. So what went wrong when we did this?
    massage the output into something that complies with the style guide. So when you change the
    formatter to output the new sort order, turns out you break all these golden file tests.
 
-1. Actual breakages! It turns out that you actually can break a compilation by re-sorting the
+1. **Actual breakages!** It turns out that you actually can break a compilation by re-sorting the
    imports. Consider the following source files:
 
    z/Z.java
