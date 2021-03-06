@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Changing import order: What could go wrong?"
+title: "Re-sorting imports: What could go wrong?"
 ---
 
 One of our team's responsibilities at Google was to make style decisions and enforce them for Java.
